@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="fundo">
+    <main>
+    <div class="container">
+        <h1 id="titulo_cadastro">Cadastro de Cliente</h1>
+        <form action="cadastro.php" method="POST">
+            <label class="label_cadastro" for="nome">Nome:</label>
+            <input class="input_cadastro" type="text" id="nome" name="nome" required>
+
+            <label class="label_cadastro" for="cpf">CPF:</label>
+            <input class="input_cadastro" type="text" id="cpf" name="cpf" required>
+
+            <label class="label_cadastro" for="endereco">Endereço:</label>
+            <input class="input_cadastro" type="text" id="endereco" name="endereco" required>
+
+            <label class="label_cadastro" for="telefone">Telefone:</label>
+            <input class="input_cadastro" type="tel" id="telefone" name="telefone" required>
+
+            <label class="label_cadastro" for="email">Email:</label>
+            <input class="input_cadastro_senha" type="email" id="email" name="email" required style="border-radius: 5px;">
+
+            <label class="label_cadastro" for="senha">Criar Senha:</label>
+            <input class="input_cadastro_senha" type="password" id="senha" name="senha" required  style="border-radius: 5px;" >
+
+            <label class="label_cadastro" for="confirmar_senha">Confirmar Senha:</label>
+            <input class="input_cadastro_senha" type="password" id="confirmar_senha" name="confirmar_senha" required  style="border-radius: 5px;">
+
+            <div id="center_cadastro">
+                <button type="submit" id="btn_login"><a href="login.html"> Cadastrar</a></button>
+            
+            </div>
+            
+            
+        </form>
+    </div>
+</main>
+</body>
+</html>

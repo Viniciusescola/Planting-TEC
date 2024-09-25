@@ -1,0 +1,447 @@
+ body {
+
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     height: 100vh;
+
+ }
+
+ .fundo {
+     background-image: url(plantacao.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+
+ }
+
+ footer {
+
+     color: #fff;
+     text-align: center;
+     padding: 10px;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     font-family: cursive;
+     background: linear-gradient(green, rgb(2, 43, 2));
+
+ }
+
+ .login-container {
+     background-color: #0326039a;
+     color: #fdfdfd;
+     padding: 10px;
+     width: 100%;
+     height: 350px;
+     border-radius: 5px;
+     justify-content: center;
+     align-items: center;
+     margin-top: 30%;
+     margin-bottom: 30%;
+
+
+ }
+
+ .main_login {
+     margin: auto;
+
+     width: 500px;
+
+ }
+
+ h2 {
+     text-align: center;
+     margin-bottom: 20px;
+ }
+
+ .input-group {
+     margin-bottom: 15px;
+ }
+
+ label {
+     display: block;
+     margin-bottom: 5px;
+ }
+
+ input[type="email"],
+ input[type="password"] {
+     width: 100%;
+     padding: 2px;
+     border: 1px solid #ccc;
+     border-radius: 1px;
+ }
+
+ #btn_login {
+     width: 101%;
+     padding: 10px;
+     background-color: #00ff00;
+
+     border: none;
+     border-radius: 3px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+
+ #btn_login a {
+     color: white;
+ }
+
+ #btn_login:hover {
+     background-color: #63afff;
+     font-family: Arial, Helvetica, sans-serif;
+
+
+
+ }
+
+
+ p {
+     text-align: center;
+ }
+
+ a {
+     color: #59a1f3;
+     text-decoration: none;
+     font-weight: bold;
+
+ }
+
+ a:hover {
+     text-decoration: underline;
+
+ }
+
+
+ .navbar {
+     background-color: #23d716;
+     padding: 10px;
+     display: flex;
+     align-items: center;
+ }
+
+ .logo img,
+ .user-icon img,
+ .engrenagem img,
+ .search-bar button img {
+     width: 30px;
+     height: 30px;
+ }
+
+
+
+
+ .search-bar input[type="text"] {
+     padding: 5px;
+     border-radius: 5px;
+     border: none;
+     margin-right: 5px;
+ }
+
+ .search-bar button {
+     background-color: #555555ad;
+     border: none;
+     padding: 5px;
+     border-radius: 5px;
+ }
+
+ .search-bar button img {
+     width: 20px;
+     height: 20px;
+ }
+
+ .user-icon,
+ .engrenegem {
+     margin-right: 10px;
+ }
+
+ footer {
+     background-color: #0a2d03;
+     color: #fff;
+     text-align: center;
+     padding: 10px;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     font-variant: small-caps;
+     justify-content: center;
+     align-items: center;
+
+
+ }
+
+ .container {
+     width: 400px;
+     margin: 100px auto;
+     background-color: #1a460754;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.621);
+ }
+
+ .container form {
+     margin-top: 20px;
+ }
+
+ #center_cadastro {
+     text-align: center;
+ }
+
+ #titulo_cadastro {
+     text-align: center;
+     color: aliceblue;
+ }
+
+ #save_cliente {
+     margin-top: 10px;
+     width: 80%;
+     height: 40px;
+     background-color: #000dff;
+
+
+     color: #ffffff;
+     text-align: center;
+     border-radius: 10px;
+     cursor: pointer;
+     transition: background-color 0.5s ease;
+ }
+
+ #save_cliente:hover {
+     background-color: #0209dd;
+ }
+
+ .input_cadastro {
+     width: calc(100% - 10px);
+     padding: 10px;
+     margin-bottom: 10px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     border: none;
+     border-radius: 5px;
+ }
+
+ /* */
+ .input_cadastro_senha {
+     width: 100%;
+     height: 30px;
+     padding: 10px;
+     margin-bottom: 10px;
+     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+     border: none;
+     /* <-- This thing here */
+     border: solid 1px #ccc;
+     border-radius: 10px;
+ }
+
+ .label_cadastro {
+     color: aliceblue;
+ }
+
+
+
+
+ .flex {
+     flex: 1;
+ }
+
+ main {
+     justify-content: center;
+     margin: auto;
+ }
+
+ .ul_nav {
+     display: flex;
+     margin: 0;
+ }
+
+ .li_nav {
+     display: inline;
+ }
+
+ /* Pag_Prinicipal*/
+ @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css");
+
+ .menu {
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     display: none;
+     height: 100%;
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     background: #f7f7f7;
+     z-index: 10;
+     overflow: hidden;
+     box-shadow: 2px 0 18px rgba(0, 0, 0, 0.26);
+ }
+
+
+
+
+
+
+
+
+ .menu li a {
+     display: inline-block;
+     text-indent: -500em;
+     height: 5em;
+     width: 5em;
+     line-height: 5em;
+     text-align: center;
+     color: #4cfa07;
+     position: relative;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+     transition: background 0.1s ease-in-out;
+ }
+
+ .menu li a:before {
+     font-family: FontAwesome;
+     speak: none;
+     text-indent: 0em;
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     font-size: 1.4em;
+ }
+
+
+
+ .menu-button {
+     text-align: center;
+     padding: 10px;
+ }
+
+
+ .menu-bar li a:hover,
+ .menu li a:hover,
+ .menu-button:hover {
+     background: #14e609;
+     color: #fff;
+ }
+
+ .menu-bar {
+     overflow: hidden;
+     left: 5em;
+     z-index: 5;
+     width: 0;
+     height: 0;
+     transition: all 0.1s ease-in-out;
+ }
+
+ .menu-bar li a {
+     display: block;
+     height: 4em;
+     line-height: 4em;
+     text-align: center;
+     color: #72739f;
+     text-decoration: none;
+     position: relative;
+     font-family: verdana;
+     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+     transition:  0.1s ease-in-out;
+ }
+
+ .menu-bar li:first-child a {
+     height: 5em;
+     background: #267fdd;
+     color: #fff;
+     line-height: 5
+ }
+
+
+ .para {
+     color: #033f72;
+     padding-left: 100px;
+     font-size: 3em;
+     margin-bottom: 20px;
+ }
+
+ .open {
+     width: 10em;
+     height: 100%;
+ }
+
+ .botao_menu {
+     border: none;
+     background: none;
+
+ }
+
+ #mapa {
+     margin: 0 auto;
+     width: 100%;
+
+
+ }
+
+ #hover_menu {
+     width: 100px;
+ }
+
+ .cabeçalho {
+
+     text-align: center;
+     color: white;
+     font-variant: small-caps;
+     background: linear-gradient(lightgreen, green, rgb(2, 43, 2));
+
+
+
+ }
+
+ .alinhar_Home {
+     display: flex;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+
+
+ }
+
+ .logo {}
+
+ header {
+     position: fixed;
+     top: 0%;
+     width: 100%;
+ }
+
+ header>h1 {
+     padding-top: 30px;
+     font-variant: small-caps;
+ }
+
+ header>p {
+     padding-bottom: 30px;
+
+ }
+
+ .textopag {
+     color: rgb(6, 94, 8);
+     font-size: x-large;
+     font-family: Cooper Black;
+     text-align:center;
+
+
+
+ }
+
+ .titulopag {
+     font-family: "#000dff";
+     font-size: large;
+ }
+
+ .imag1div {
+     text-align: right;
+     background-position: right center;
+
+     
+ }
+
+ .fundopagprincipal {
+     background-color: #deffd8;
+
+ }
