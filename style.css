@@ -445,3 +445,15 @@
      background-color: #deffd8;
 
  }
+ .pagina_principal_container{ width: 400px;
+    background-color: #0326039a;
+    color: #fdfdfd;
+    height: 700px;
+    border-radius: 5px;
+   margin-left:325px;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.621);
+
+   
+}
