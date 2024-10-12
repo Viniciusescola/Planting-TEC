@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style.css">
 
     <title>Minha Página</title>
+    <!-- Adicionando a biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
@@ -30,14 +32,14 @@
             - <a href="#Medição do Terreno">Medição do Terreno</a> - <a href="#Gráficos">Gráficos</a> </p>
 
 
-            
+
     </header>
     <div style="margin-top:100px">
-    <div id="Home"></div>
+        <div id="Home"></div>
 
 
 
-    
+
         <div class="textopag">
 
 
@@ -54,64 +56,153 @@
                 </p>
             </div>
             <div>
-            <p>
+                <p>
 
 
-            <h3>Facilitar o Acompanhamento da Lavoura</h3>
+                <h3>Facilitar o Acompanhamento da Lavoura</h3>
 
-            Com o Planting Tech, você terá acesso a um sistema intuitivo que simplifica o acompanhamento de seus
-            cultivos. A
-            plataforma reúne informações valiosas sobre suas lavouras, permitindo que você monitore o desempenho de
-            cada
-            etapa do processo, desde o plantio até a colheita. Nossa interface amigável e organizada facilita a
-            análise dos
-            dados, fornecendo insights cruciais para tomada de decisões mais assertivas.
+                Com o Planting Tech, você terá acesso a um sistema intuitivo que simplifica o acompanhamento de seus
+                cultivos. A
+                plataforma reúne informações valiosas sobre suas lavouras, permitindo que você monitore o desempenho de
+                cada
+                etapa do processo, desde o plantio até a colheita. Nossa interface amigável e organizada facilita a
+                análise dos
+                dados, fornecendo insights cruciais para tomada de decisões mais assertivas.
 
-            <H4>Controle Total </H4>
+                <H4>Controle Total </H4>
 
-            Tenha uma visão abrangente de suas operações, acessando informações detalhadas sobre cada fase do
-            cultivo.
+                Tenha uma visão abrangente de suas operações, acessando informações detalhadas sobre cada fase do
+                cultivo.
 
-            <h4>Tomada de Decisões Eficazes</h4>
+                <h4>Tomada de Decisões Eficazes</h4>
 
-            Baseie suas decisões em dados precisos, garantindo maior produtividade e rentabilidade.
-           
-            <H4> Aumento da Eficiência</H4>
+                Baseie suas decisões em dados precisos, garantindo maior produtividade e rentabilidade.
 
-            <div id="Metereologico"></div>
+                <H4> Aumento da Eficiência</H4>
 
-            <h2> Gerencie seus recursos com inteligência, reduzindo desperdícios e otimizando seus investimentos
-            </h2>
 
-            <P>
-            <h2> Acompanhe o clima aqui </h2>
-            </P>
-            </div>
 
-            <iframe title="Ventus Weather Map Shortcode -24.9555 -53.4552" loading="lazy"
-                style="width: 100%; height: 350px; border-radius: 20px; box-sizing: border-box; "
-                src="https://embed.windy.com/embed2.html?lat=-24.9555&amp;lon=-53.4552&amp;zoom=4&amp;overlay=wind&amp;marker=true&amp;pressure=true&amp;detailLat=-24.9555&amp;detailLon=-53.4552&amp;metricWind=km/h&amp;metricTemp=°C&amp;detail=true&amp;calendar=24&amp;product=ecmwf&amp;level=surface&amp;menu=&amp;message=true&amp;type=map&amp;location=coordinates&amp;radarRange=-1"
-                frameborder="0">
+                <h2> Gerencie seus recursos com inteligência, reduzindo desperdícios e otimizando seus investimentos
+                </h2>
 
-            </iframe>
 
-            <div id="Medição do Terreno"></div>
 
-            <P>
-            <h2> Aqui você vai medir seu Terreno </h2>
-            </P>
-            <iframe class="embed-responsive-item" width="100%" height="500"
-                src="https://geoportal-ibge.maps.arcgis.com/apps/MapSeries/index.html?appid=c26c269f75544597b3c93661e25f28f5"
-                frameborder="0" scrolling="yes"></iframe>
 
-            <div id="Gráficos"></div>
-            <p>
-            <h2 style="padding-bottom: 100px;"> Resultados do seu plantio </h2>
-            </p>
+</html>
+<div id="Metereologico"></div>
 
-        </div>
+
+<P>
+<h2> Acompanhe o clima aqui </h2>
+</P>
+</div>
+
+<iframe title="Ventus Weather Map Shortcode -24.9555 -53.4552" loading="lazy"
+    style="width: 100%; height: 350px; border-radius: 20px; box-sizing: border-box; "
+    src="https://embed.windy.com/embed2.html?lat=-24.9555&amp;lon=-53.4552&amp;zoom=4&amp;overlay=wind&amp;marker=true&amp;pressure=true&amp;detailLat=-24.9555&amp;detailLon=-53.4552&amp;metricWind=km/h&amp;metricTemp=°C&amp;detail=true&amp;calendar=24&amp;product=ecmwf&amp;level=surface&amp;menu=&amp;message=true&amp;type=map&amp;location=coordinates&amp;radarRange=-1"
+    frameborder="0">
+
+</iframe>
+
+<div id="Medição do Terreno"></div>
+
+<P>
+<h2> Aqui você vai medir seu Terreno </h2>
+</P>
+<iframe class="embed-responsive-item" width="100%" height="500"
+    src="https://geoportal-ibge.maps.arcgis.com/apps/MapSeries/index.html?appid=c26c269f75544597b3c93661e25f28f5"
+    frameborder="0" scrolling="yes"></iframe>
+
+<div id="Gráficos"></div>
+<p>
+<h2 style="padding-bottom: 100px;"> Resultados do seu plantio </h2>
+</p>
+<title>Cadastro de Cultivo</title>
+
+
+<div class="pagina_principal_container">
+    <select name="tipo_semente" id="tipo_semente"></select>
+    <option value="soja">Soja</option>
+    <option value="milho">Milho</option>
+    <option value="trigo">Trigo</option>
+    </select><br><br>
+
+    <form action="cadastrar_cultivo.php" method="POST">
+        <label class="label_cadastro">Tipo de Cultivo:</label>
+        <input type="text" name="tipo_cultivo" class="input_cadastro" required>
+
+        <label class="label_cadastro">Quantidade de Agrotóxico (litros):</label>
+        <input type="number" name="quantidade_agro" class="input_cadastro" required>
+
+        <label class="label_cadastro">Quantidade de Sementes (kg):</label>
+        <input type="number" name="quantidade_semente" class="input_cadastro" required>
+        <label for="tipo_adubo">Fertilizantes:</label>
+        <input type="text" name="tipo_adubo" id="tipo_adubo" placeholder="Informe o adubo usado" class="input_cadastro"
+            required>
+
+        <label for="quantidade_insumos">Quantidade de Insumos (kg):</label>
+        <input type="number" name="quantidade_insumos" class="input_cadastro" required>
+
+        <label for="data_plantio">Data do Plantio:</label>
+        <input type="date" name="data_plantio" class="input_cadastro" required>
+
+
+
+
+        <input type="submit" value="Cadastrar" id="save_cliente">
+
+    </form>
+</div>
 </body>
+<div id="Gráficos"></div>
+<h2 style="padding-bottom: 100px;"> Resultados do seu plantio </h2>
 
+<!-- Adicionando o canvas para o gráfico de pizza -->
+<div style="width: 40%; margin: 0 auto;">
+    <canvas id="graficoPlantio"></canvas>
+</div>
+</div>
+
+<script>
+    // Configurando o gráfico de pizza
+    const ctx = document.getElementById('graficoPlantio').getContext('2d');
+    const graficoPlantio = new Chart(ctx, {
+        type: 'pie', // Tipo do gráfico: pizza
+        data: {
+            labels: ['Milho', 'Soja', 'Trigo', 'Arroz', 'Café'], // Nomes das culturas
+            datasets: [{
+                label: 'Produção (Toneladas)',
+                data: [120, 150, 180, 90, 700], // Dados de produção
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Produção de Culturas por Toneladas'
+                }
+            }
+        }
+    });
+</script>
 <script>
 
     function aparecer_menu() {
@@ -122,6 +213,9 @@
         const note = document.querySelector('.menu');
         note.style.display = 'none';
     }
+</div >
+</body >
+
 
 </script>
 <footer style="margin-top:100px">
