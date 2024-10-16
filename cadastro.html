@@ -168,38 +168,54 @@
     </form>
 </div>
 </body>
-<div id="Gráficos"></div>
-<h2 style="padding-bottom: 100px;"> Resultados do seu plantio </h2>
-
-<!-- Adicionando o canvas para o gráfico de pizza -->
-<div style="width: 35%; margin: 0 auto; margin-top: -100px; margin-bottom: 100px;">
-    <canvas id="graficoPlantio"></canvas>
-</div>
+<div style="width: 80%; margin: 0 auto;">
+    <!-- Primeiro Gráfico: Produção por Cultura -->
+    <h2>Produção por Cultura</h2>
+    <canvas id="graficoCulturas"></canvas>
+    
+    <!-- Segundo Gráfico: Rendimento por Estação -->
+    <h2>Rendimento por Estação</h2>
+    <canvas id="graficoColheitas"></canvas>
 </div>
 
 <script>
-    // Configurando o gráfico de pizza
-    const ctx = document.getElementById('graficoPlantio').getContext('2d');
-    const graficoPlantio = new Chart(ctx, {
-        type: 'pie', // Tipo do gráfico: pizza
+    // Dados do PHP para o primeiro gráfico (Produção por Cultura)
+    const labelsCulturas = [
+        <?php
+            foreach ($culturas as $cultura) {
+                echo "'" . $cultura['nome_cultura'] . "',";
+            }
+        ?>
+    ];
+    const dataCulturas = [
+        <?php
+            foreach ($culturas as $cultura) {
+                echo $cultura['producao'] . ",";
+            }
+        ?>
+    ];
+
+    // Renderiza o primeiro gráfico de pizza (Produção por Cultura)
+    const ctx1 = document.getElementById('graficoCulturas').getContext('2d');
+    const graficoCulturas = new Chart(ctx1, {
+        type: 'pie',
         data: {
-            labels: ['Milho', 'Soja', 'Trigo', 'Arroz', 'Café'], // Nomes das culturas
+            labels: labelsCulturas,
             datasets: [{
-                label: 'Produção (Toneladas)',
-                data: [120, 150, 180, 90, 700], // Dados de produção
+                data: dataCulturas,
                 backgroundColor: [
-                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
                 ],
                 borderColor: [
-                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
                     'rgba(255, 206, 86, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)'
                 ],
                 borderWidth: 1
             }]
@@ -211,7 +227,59 @@
                 },
                 title: {
                     display: true,
-                    text: 'Produção de Culturas por Toneladas'
+                    text: 'Produção de Culturas (toneladas)'
+                }
+            }
+        }
+    });
+
+    // Dados do PHP para o segundo gráfico (Rendimento por Estação)
+    const labelsColheitas = [
+        <?php
+            foreach ($colheitas as $colheita) {
+                echo "'" . $colheita['estacao'] . "',";
+            }
+        ?>
+    ];
+    const dataColheitas = [
+        <?php
+            foreach ($colheitas as $colheita) {
+                echo $colheita['rendimento'] . ",";
+            }
+        ?>
+    ];
+
+    // Renderiza o segundo gráfico de pizza (Rendimento por Estação)
+    const ctx2 = document.getElementById('graficoColheitas').getContext('2d');
+    const graficoColheitas = new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: labelsColheitas,
+            datasets: [{
+                data: dataColheitas,
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    position: 'top'
+                },
+                title: {
+                    display: true,
+                    text: 'Rendimento de Colheitas (toneladas)'
                 }
             }
         }
@@ -227,12 +295,10 @@
         const note = document.querySelector('.menu');
         note.style.display = 'none';
     }
-</div >
-</body >
 
 
 </script>
-<footer style="margin-top:100px">
+<footer>
 
     <div>
 
@@ -240,5 +306,8 @@
 
     </div>
 </footer>
+</div >
+</body >
+
 
 </html>
